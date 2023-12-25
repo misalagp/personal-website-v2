@@ -63,6 +63,9 @@ a {
   z-index: 12;
   pointer-events: none;
   transition: 1s;
+  @media(max-width: 576px) {
+    position: relative;
+  }
 }
 
 .bio,
@@ -109,10 +112,16 @@ a {
 .transition-projects {
   left: 7.5rem;
   background: var(--egg-shell);
+  @media(max-width: 576px) {
+    left: 0;
+  }
 }
 .transition-find-me {
   left: 15rem;
   background: var(--dark-peach);
+  @media(max-width: 576px) {
+    left: 0;
+  }
 }
 
 .bio .transition-bio,
@@ -124,10 +133,16 @@ a {
   transform: scale(1);
 }
 .projects .transition-projects {
-  transform: scale(1) translateX(-7.5rem) ;
+  transform: scale(1) translateX(-7.5rem);
+  @media(max-width: 576px) {
+    transform: scale(1);
+  }
 }
 .find-me .transition-find-me {
-  transform: scale(1) translateX(-15rem) ;
+  transform: scale(1);
+  @media(max-width: 576px) {
+    transform: scale(1);
+  }
 }
 
 // dots
@@ -206,6 +221,9 @@ h1 {
   background-size: 45vw auto, 45vw auto, 30vw auto;
   background-repeat: repeat-x;
   background-position: 0px 15%, 200px 25%, -50px 2vw;
+  @media(max-width: 576px) {
+    font-size: 27vw;
+  }
 }
 .projects h1 {
   background-color: var(--dark-peach);
@@ -222,6 +240,11 @@ nav {
   top: var(--border-width);
   left: var(--border-width);
   z-index: 10;
+  @media(max-width: 576px) {
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
   // width: 100%;
   ul {
     list-style: none;
@@ -229,6 +252,9 @@ nav {
     text-align: center;
     margin: 0;
     padding: 0;
+    @media(max-width: 576px) {
+      flex-wrap: wrap;
+    }
   }
   li {
     flex: 1 0 12rem;
@@ -244,6 +270,9 @@ nav {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 1.4rem;
+    @media(max-width: 576px) {
+      padding: 2rem;
+    }
   }
   .link-projects {
     color: var(--purple-brown);
@@ -258,11 +287,18 @@ main {
   padding: 0 1.5rem;
   margin: -3rem auto 0;
   font-size: 2rem;
+  @media(max-width: 576px) {
+    padding: 0 2.5rem;
+    margin: 3rem auto 0;
+  }
 }
 .bio .container .grid{
   display: flex;
   justify-content: space-between;
   width: 100%;
+  @media(max-width: 576px) {
+    flex-direction: column;
+  }
 }
 .bio header main .container h1 {
   font-family: Trocchi,Georgia,sans-serif;
@@ -295,10 +331,17 @@ main .grid h1 {
   //   width: 0;
   // }
   -webkit-mask-image: none;
+  @media(max-width: 576px) {
+    width: 100%;
+    font-size: 32px;
+  }
 }
 
 main .container .grid > div {
   width: 50%;
+  @media(max-width: 576px) {
+    width: 100%;
+  }
 }
 
 
@@ -443,6 +486,9 @@ svg {
   padding: 1.5rem 0;
   margin-bottom: 3rem;
   position: relative;
+  @media(max-width: 576px) {
+    grid-column-gap: 0;
+  }
 }
 
 @media (min-width: 64em) {
